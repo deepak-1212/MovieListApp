@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.navigation.safeargs)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -16,6 +18,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String","MOVIE_BASE_URL", "\"https://www.omdbapi.com\"")
     }
 
     buildTypes {
@@ -28,14 +31,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
     kotlinOptions {
         jvmTarget = "1.8"
     }
     dataBinding {
         enable = true
+    }
+    buildFeatures {
+        buildConfig = true
     }
 }
 
@@ -52,11 +58,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.retrofit)
-//    implementation(libs.navigationfragment)
-//    implementation(libs.navigationui)
-//    implementation(libs.hilt.dagger)
-//    annotationProcessor(libs.hilt.android.compiler)
+    implementation(libs.retrofit.converter.gson)
     implementation(libs.androidx.paging)
     implementation(libs.bumptech.glide)
     annotationProcessor(libs.bumptech.glide.compiler)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.hilt.android)
 }
