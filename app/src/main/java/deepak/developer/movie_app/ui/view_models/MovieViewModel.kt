@@ -1,5 +1,6 @@
 package deepak.developer.movie_app.ui.view_models
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,6 +21,7 @@ import deepak.developer.movie_app.utils.Status
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+private const val TAG = "MovieViewModelTAG"
 @HiltViewModel
 class MovieViewModel @Inject constructor(
     private val movieInterface: MovieInterface,
@@ -36,6 +38,7 @@ class MovieViewModel @Inject constructor(
     }
 
     fun setQuery(s: String) {
+        Log.i(TAG, "setQuery s: $s")
         query.postValue(s)
     }
 

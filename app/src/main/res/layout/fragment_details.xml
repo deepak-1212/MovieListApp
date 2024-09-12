@@ -42,6 +42,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="400dp"
+                        app:load="@{movieDetails.poster}"
                         android:scaleType="centerCrop" />
 
                     <ImageView

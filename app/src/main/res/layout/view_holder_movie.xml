@@ -31,6 +31,7 @@
                 android:id="@+id/movie_image"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
+                app:load="@{movie.poster}"
                 android:padding="4dp" />
 
             <com.google.android.material.textview.MaterialTextView

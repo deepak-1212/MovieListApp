@@ -1,5 +1,6 @@
 package deepak.developer.movie_app.data.repositories
 
+import deepak.developer.movie_app.BuildConfig
 import deepak.developer.movie_app.data.models.MovieDetails
 import deepak.developer.movie_app.data.network.MovieInterface
 import deepak.developer.movie_app.data.network.NetworkConstants
@@ -10,24 +11,16 @@ import deepak.developer.movie_app.utils.Status
 class MovieDetailsRepository(private val movieInterface: MovieInterface) {
 
     suspend fun getMovieDetails(imdbId: String): ApiResult<MovieDetails> {
-
         return try {
-
-            val response = movieInterface.getMovieDetails(imdbId, NetworkConstants.API_KEY)
+            val response = movieInterface.getMovieDetails(imdbId, BuildConfig.MOVIE_API_KEY)
             if (response.isSuccessful) {
-
-                ApiResult(Status.SUCCESS, response.body(), null)
-
+                ApiResult.success(response.body())
             } else {
-                ApiResult(Status.ERROR, null, null)
+                ApiResult.error("Something went wrong")
             }
-
         } catch (e: Exception) {
-            ApiResult(Status.ERROR, null, null)
+            ApiResult.error(e.message)
         }
-
-
     }
-
 
 }

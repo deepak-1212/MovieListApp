@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.navigation.safeargs)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+    id("kotlin-kapt")
 }
 
 android {
@@ -19,6 +20,7 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String","MOVIE_BASE_URL", "\"https://www.omdbapi.com\"")
+        buildConfigField("String","MOVIE_API_KEY", "\"5b24b5aa\"")
     }
 
     buildTypes {

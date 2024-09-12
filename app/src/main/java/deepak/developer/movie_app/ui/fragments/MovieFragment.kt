@@ -8,11 +8,12 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import deepak.developer.movie_app.databinding.FragmentMovieBinding
 import deepak.developer.movie_app.ui.adapters.MoviePagingAdapter
 import deepak.developer.movie_app.ui.view_models.MovieViewModel
 
-
+@AndroidEntryPoint
 class MovieFragment : Fragment() {
 
     private var movieFragmentBinding: FragmentMovieBinding? = null
@@ -37,13 +38,16 @@ class MovieFragment : Fragment() {
 
         movieFragmentBinding?.movieSearch?.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                query?.let {
-                    viewModel.setQuery(it)
-                }
+//                query?.let {
+//                    viewModel.setQuery(it)
+//                }
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
+                newText?.let {
+                    viewModel.setQuery(it)
+                }
                 return false
             }
         })
