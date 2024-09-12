@@ -1,6 +1,5 @@
 package deepak.developer.movie_app
 
-import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import deepak.developer.movie_app.data.models.Movie

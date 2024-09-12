@@ -3,9 +3,7 @@ package deepak.developer.movie_app.data.repositories
 import deepak.developer.movie_app.BuildConfig
 import deepak.developer.movie_app.data.models.MovieDetails
 import deepak.developer.movie_app.data.network.MovieInterface
-import deepak.developer.movie_app.data.network.NetworkConstants
 import deepak.developer.movie_app.utils.ApiResult
-import deepak.developer.movie_app.utils.Status
 
 
 class MovieDetailsRepository(private val movieInterface: MovieInterface) {
