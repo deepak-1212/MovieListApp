@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "movie-list-app-61845",
+  "private_key_id": "40ae053f99ed8cf8d690df1899a1367ef5491a14",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/A0sf/hCFAu6U\nR4gJwZxAaTS/vf68R0tNzknltTGIJvJpdPIG3o+p1CH+AVGQevgWBLKjg2m36l8k\nIF8EfJCqzo06aEvexnjRrtUbihzUba3K2JzMBMO+aM5SE8lBEoJJYW2MB2960rRC\ndGeLBykd+90rLl/AA/W+FRzOY8igbJN6buEZkPpvJrtd00kcMfEWGiqhk41KOS/p\nppas+Cg/4OKhWpfEVy0eFcB/YCrOCyI7SviNijd1LYFkQ3MP2S8fIWfLXRMi/Fzn\nkwZ7l2UPeLBxTd4OrMnQJNS3PY5/wEVpqqRLZTijIAoCvbhvIV4AQQB8fc7DASq8\nhfB++BlpAgMBAAECggEAC/objninyy9RNmBQhLbBzWggs+/TNosMixG8SyL+usLL\nwGu3dqbN60rZ4XYZCdjWusq183rHTjjr7kqj/+wE8NuID3mACF/5g2xVqycQgmFo\n3FHowwIpeURTwOHCD3Um+42YXjIOfhe9eyKWu35KHbnajF1ECQ42gndgbwXitpb8\ni6Eoy67I6Ms6X7+3EgToqp05np0W4+5xqExUCtFfx4hlqPuCu9sZkgZMqid5PzOa\nVGxiYTNH4L9I/BaO3K7c/hKXOe9x7P5eyqae9ZCADw3ymMLaCYglRjTGbJoqKiH5\nbL6rrISH30JaaFRz64L3wIcVLJLNf75j1j94ZeRYYQKBgQDhqvdpcgJmE+Dqp3P0\n1kK66BPwCvZo9fOco6k//E2c/XrCvV0XmLcIZqoH70xBDkRAfGwrCo0rKYlh23k2\nHdvHT1A/xmOXV6k6zX0oWu+/uZ4JvcFo4K5B4cfW3+7J/JuTXkHupZzJ8I7aFCvv\nHIKSnTi0SXkq0uLOpKghFnVe3wKBgQDYr+EuF2LEubTsGpUPuKVI0Mr9jA/snQjs\nZS490wyQBUDrzqc3R9X2YWAsfYvPauqra7irG6NF2zncYB4dLe/YTcQzXcS/TA3J\n/dbOQEChNb/32eqkla/cl4SSxSnMYn2u98zbfeZk03zQ6ClcWKuMiiUDtO4Vk1gd\nV0lgxD+4twKBgD6t+PhdxVLK9K7YgfmgRXqamWcT9Gsk3VxFjO4LyxbuxNkwNZon\nPbdkpJd9nOV46/YpWPX/gURaziDTD/C7DF9opTaBiQnxPDzr9HZwA6VyDfZQsVbL\nCTudVZ9WJYIO2rts880wTMM+QL9L2QQaHB5S8vwIaFI/ruWMkHJYRZNrAoGBAJOv\n7I55qfvjhwiVZZt9gkoK5Q/C8ueWcIqOu+GvgxR2QDV4eEgZUh/HZsFsIGqSuLd1\niDw3biUismEdsei5cou/FUbdVkf8EjnmJQ4WhPZbqCfKAz+CNobnTpiqgT6osnka\ntCm1ud5mtt+8HNSwKtxzG59XJh7WemwlHgIyQCwpAoGAEj/4QcUMeoISRCTgrXD7\nk4YdqunpycnSGceq+GD39eOIgF1JJAkf/4abgA3N2nbR5Ys31EPKse+1tH4TigPb\nhi9k7jvjU9ltei4kLd0ungTliqgDyQ1sBsEhoAy78lpmKsCrt0H1gzMMUN4j/dIK\nTHct+XS161tPsD49VrOvpz4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "movie-list-app@movie-list-app-61845.iam.gserviceaccount.com",
+  "client_id": "108271530540261710773",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/movie-list-app%40movie-list-app-61845.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

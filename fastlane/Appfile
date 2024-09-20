@@ -1,0 +1,2 @@
+json_key_file("/Users/jaindeepak/Documents/development/android_projects/MovieListApp/movie-list-app-61845-40ae053f99ed.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("deepak.developer.movie_app") # e.g. com.krausefx.app
