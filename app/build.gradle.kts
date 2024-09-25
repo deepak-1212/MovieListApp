@@ -19,8 +19,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String","MOVIE_BASE_URL", "\"https://www.omdbapi.com\"")
-        buildConfigField("String","MOVIE_API_KEY", "\"5b24b5aa\"")
+        buildConfigField("String", "MOVIE_BASE_URL", "\"https://www.omdbapi.com\"")
+        buildConfigField("String", "MOVIE_API_KEY", "\"5b24b5aa\"")
     }
 
     buildTypes {
@@ -33,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     dataBinding {
         enable = true
@@ -45,6 +45,8 @@ android {
     buildFeatures {
         buildConfig = true
     }
+
+
 }
 
 dependencies {
@@ -66,4 +68,8 @@ dependencies {
     annotationProcessor(libs.bumptech.glide.compiler)
     ksp(libs.hilt.android.compiler)
     implementation(libs.hilt.android)
+}
+
+tasks.register("printVersionName") {
+    println("v" + android.defaultConfig.versionName + "(" + android.defaultConfig.versionCode + ")")
 }
