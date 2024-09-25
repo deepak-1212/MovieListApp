@@ -62,7 +62,7 @@ jobs:
           mv "./app/build/outputs/bundle/release/app-release.aab" "./app/build/outputs/bundle/release/${{ env.OUTPUT_NAME }}.aab"
         
       - name: Upload debug AAB
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ env.OUTPUT_NAME }}
           path: app/build/outputs/bundle/release/${{ env.OUTPUT_NAME }}.aab
