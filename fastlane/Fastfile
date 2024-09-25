@@ -16,23 +16,26 @@
 default_platform(:android)
 
 platform :android do
-  desc "Runs all the tests"
-  lane :test do
-    gradle(task: "test")
-  end
-
-  desc "Submit a new Beta Build to Crashlytics Beta"
-  lane :beta do
-    gradle(task: "clean assembleRelease")
-    crashlytics
-  
-    # sh "your_script.sh"
-    # You can also use other beta testing services here
-  end
-
-  desc "Deploy a new version to the Google Play"
-  lane :deploy do
-    gradle(task: "clean assembleRelease")
-    upload_to_play_store
+  desc "Submit a new Internal Build to Play Store"
+  lane :internal do
+   previous_build_number = google_play_track_version_codes(track: "production")[0]
+   current_build_number = previous_build_number + 1
+   gradle(
+      task: "bundle",
+      build_type: 'release',
+      properties: {
+        "android.injected.signing.store.file" => ENV['PWD'] + "/Users/jaindeepak/Documents/development/app-certificates/movie-list-app",
+        "android.injected.signing.store.password" => "123456",
+        "android.injected.signing.key.alias" => "Movie",
+        "android.injected.signing.key.password" => "123456",
+        "android.injected.version.code" => current_build_number
+      })
+    upload_to_play_store(
+      track: 'internal',
+      release_status: 'completed',
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_apk: true,
+      skip_upload_screenshots: true)
   end
 end
