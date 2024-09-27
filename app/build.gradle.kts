@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId = "deepak.developer.movie_app"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -33,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     dataBinding {
         enable = true
@@ -51,23 +51,23 @@ android {
 
 dependencies {
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.activity)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.databinding.common)
-    implementation(libs.androidx.navigation.fragment)
+    api(libs.androidx.core.ktx)
+    (libs.androidx.appcompat)
+    api(libs.material)
+    api(libs.androidx.activity)
+    api(libs.androidx.constraintlayout)
+    api(libs.androidx.databinding.common)
+    api(libs.androidx.navigation.fragment)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
-    implementation(libs.androidx.paging)
-    implementation(libs.bumptech.glide)
-    annotationProcessor(libs.bumptech.glide.compiler)
+    api(libs.retrofit)
+    api(libs.retrofit.converter.gson)
+    api(libs.androidx.paging)
+    api(libs.bumptech.glide)
+    ksp(libs.bumptech.glide.compiler)
     ksp(libs.hilt.android.compiler)
-    implementation(libs.hilt.android)
+    api(libs.hilt.android)
 }
 
 tasks.register("printVersionName") {

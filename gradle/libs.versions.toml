@@ -1,6 +1,6 @@
 [versions]
 agp = "8.5.2"
-kotlin = "1.9.0"
+kotlin = "2.0.20"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -10,13 +10,12 @@ material = "1.12.0"
 activity = "1.9.2"
 constraintlayout = "2.1.4"
 retofit = "2.10.0"
-navigation = "2.8.0"
+navigation = "2.8.1"
 paging = "3.3.2"
 glide = "4.14.2"
 databindingCommon = "8.6.1"
-navigationFragment = "2.8.0"
 hilt = "2.51.1"
-ksp = "2.0.10-1.0.24"
+ksp = "2.0.20-1.0.24"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,9 +30,9 @@ retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = 
 retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retofit" }
 androidx-paging = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "paging" }
 bumptech-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
-bumptech-glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+bumptech-glide-compiler = { group = "com.github.bumptech.glide", name = "ksp", version.ref = "glide" }
 androidx-databinding-common = { group = "androidx.databinding", name = "databinding-common", version.ref = "databindingCommon" }
-androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigation" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 
