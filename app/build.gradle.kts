@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.navigation.safeargs)
+
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -39,11 +40,10 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    dataBinding {
-        enable = true
-    }
     buildFeatures {
         buildConfig = true
+        viewBinding = true
+        dataBinding = true
     }
 
 
@@ -51,23 +51,25 @@ android {
 
 dependencies {
 
-    api(libs.androidx.core.ktx)
-    (libs.androidx.appcompat)
-    api(libs.material)
-    api(libs.androidx.activity)
-    api(libs.androidx.constraintlayout)
-    api(libs.androidx.databinding.common)
-    api(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.databinding.common)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    api(libs.retrofit)
-    api(libs.retrofit.converter.gson)
-    api(libs.androidx.paging)
-    api(libs.bumptech.glide)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.gson)
+    implementation(libs.androidx.paging)
+    implementation(libs.bumptech.glide)
     ksp(libs.bumptech.glide.compiler)
     ksp(libs.hilt.android.compiler)
-    api(libs.hilt.android)
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
+
 }
 
 tasks.register("printVersionName") {
